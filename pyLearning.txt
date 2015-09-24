@@ -1,0 +1,9 @@
+Copying 2-D array in python
+
+Today i learned how to copy 2-D array in python. I had an array of strings which i needed to copy into another array.
+
+I looked for how 2D arrays are copied in python and found the solution is to use the copy module.
+
+I added the line, from copy import copy, deepcopy
+
+then i copied the array as,  copied_array_name = deepcopy(original_array_name) 
