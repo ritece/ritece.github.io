@@ -1,0 +1,22 @@
+Binary search is used to find a specific value in a list of elements which are sorted.
+
+The complexity to find a particular element is O(log(n)).
+
+Let 'left' denote the lowermost value and 'right' denote the rightmost value possible, then following is the binary search algorithm.
+
+
+def binarySearch(left,right,array):
+    ans = -1
+    while left<=right:
+          mid = left + (right-left)/2
+          
+          if array[mid]==required_value:
+             ans = mid
+             return ans
+
+          elif array[mid]<required_value:
+             left=mid+1
+
+          else:
+             right=mid-1
+    return ans
