@@ -1,0 +1,27 @@
+If all the edge weights are equal, then breadth first search starting from a particular node, gives us the shortest path to reach any of the other nodes (if they are connected).
+
+In this problem, all the edge weights are given to be equal to 6. Edges between the nodes are given and we need to find the shortest path from a given node to all other nodes.
+
+We need to run bfs from the start node and record the level number of each node.
+
+                      start
+                      /   \
+		   node1  node2  (level 1)
+		   / \    /  \
+                  
+BFS is done using a queue (First In and First Out) data structure. 
+Initially the queue, holds only the starting node and follows the following algorithm -
+
+Mark level of starting node to 0.
+
+Until the queue is not empty, follow the instructions below:
+          get out the element at the beginning of the queue. let's call it "current".
+	  iterate over the list of the children of the "current" and if they are not visited, put them into the queue. Mark level of each such child as 1+level[current]. Also, since we are visiting the unvisited children now, so mark visited property of each children to true.
+
+After the queue is empty, now our level array will hold the correct depth of each of the node from the starting node.
+
+Iterate over the level list from index 1 to n, also skip the starting node. then,
+   if level[index]!=-1:
+      we need to print 6*level[index]
+   else:
+      print -1            
