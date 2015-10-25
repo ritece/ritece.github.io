@@ -1,0 +1,11 @@
+Given a graph, the problem asks to find number of ways to select two nodes such that they do not belong to the same group or they are not connected through any path.
+
+Visualising the graph it would be like there are distinct connected graphs of different sizes. We can calculate the sizes of each such connected component using the dfs/bfs approach. 
+
+Out of n nodes, two nodes can be selected in nC2 or (n*(n-1))/2 ways. But these combinations also include some pair of nodes such that they are from the same group (or same connected component). 
+
+If we can know that, how many ways are there such that the pair of nodes selected are from the same connected component, then we can subtract this from the total number of ways of selecting 2 nodes out of n to get our answer.
+
+So, each time we find a connected component, we get its size. Now, we can select any two nodes such that they are from this group only is (size*(size-1))/2. Now we should subtract this number from nC2.
+
+We repeat this for each of the connected component and at last we have our answer.
