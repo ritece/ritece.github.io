@@ -1,0 +1,76 @@
+\𝗐
+
+The expression \w will match any word character. 
+Word characters include alphanumeric characters (a-z, A-Z and 0-9) and underscores (_).
+
+\𝖶
+
+\W matches any non-word character. 
+Non-word characters include characters other than alphanumeric characters (a-z, A-Z and 0-9) and underscore (_).
+
+$
+
+The $ symbol matches the position at the end of a string.
+
+^
+
+The ^ symbol matches the position at the start of a string.
+
+[ ]
+
+The character class [ ] matches only one out of several characters placed inside the square brackets.
+
+[^]
+
+The negated character class [^] matches any character that is not in the square brackets.
+
+{𝗑}
+
+The tool {x} will match exactly x repetitions of character/character class/groups.
+
+For Example:
+
+w{3} : It will match the character w exactly 3 times. 
+[xyz]{5} : It will match the characters x, y or z exactly 5 times. 
+\d{4} : It will match any digit exactly 4 times.
+
+{𝗑,𝗒}
+
+The {x,y} tool will match between x and y (both inclusive) repetitions of character/character class/group.
+
+For Example:
+w{3,5} : It will match the character w 3, 4 or 5 times. 
+[xyz]{5,} : It will match the character x, y or z 5 or more times. 
+\d{1, 4} : It will match any digits 1, 2, 3, 4 or 5 times.
+
+*
+
+The * tool will match zero or more repetitions of character/character class/group.
+
+For Example:
+w* : It will match the character w 0 or more times. 
+[xyz]* : It will match the characters x, y or z 0 or more times. 
+\d* : It will match any digit 0 or more times.
+
++
+
+The + tool will match one or more repetitions of character/character class/group.
+
+For Example:
+w+ : It will match the character w 1 or more times. 
+[xyz]+ : It will match the character x, y or z 1 or more times.
+\d+ : It will match any digit 1 or more times.
+
+?
+
+The ? tool matches zero or one occurrence of a character/character class/group.
+
+( )
+
+Parenthesis ( ) around a regular expression can group that part of regex together. This allows us to apply different quantifiers to that group.
+
+These parenthesis also create a numbered capturing. It stores the part of string matched by the part of regex inside parentheses.
+
+(?: )
+
+(?: ) can be used to create a non-capturing group. It is useful if we do not need the group to capture its match.
