@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <head>
 <style>
-  nav.navbar{
-        background-color:#00A9F0;
-     }
+
+
   nav a{
        padding-top: 100px !important;
        padding-bottom: 100px !important;
        font-size: 20px;
     }
     
-  .first{
+ 
+    
+  .firstStory{
     font-size: 20px
-    margin-left: 20px;
-    margin-right:20px;
-    margin-top:50px;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:300px;
   }
+  
+  nav.navbar{
+  background-color:#00A9F0;
+   // Animation
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
+nav.navbar.shrink {
+  min-height: 200px;
+}
+
 </style>
 
+
 </head>
+
+  
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 
-<nav class = "navbar navbar-default" role="navigation">
+<script>
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() < 200) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+  
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       alert("bottom!");
+   }
+   
+});
+
+</script>
+
+<nav class = "navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class= "navbar-header">
        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -48,7 +81,8 @@
 
 <body>
 
-<div class = "first">
+<div class = "firstStory">
+
 Hello, world
 
 I recently read that it is possible to create a website using github. I learned how to do so using this link -<A href="https://www.thinkful.com/learn/a-guide-to-using-github-pages/start/new-project/user-page/" target="_blank">Create your own website"</A>.
@@ -58,7 +92,55 @@ I recently read that it is possible to create a website using github. I learned 
 <p>Today i watched a video called 'Think Audacious'. It was from the Apple developer conference. It was a talk delivered by the founder, Debbie Sterling, of the interactive toy company, GoldieBlox.</p>
 
 <p>Her story strengthened the fact that perseverance is the key to success. We need to ignore our critics and believe in ourselves to go beyond our limits to achieve our goal. </p>  
+ 
 </div>
+
+<p>
+  Quotes -
+  <ul>
+    “If you always put limits on everything you do, physical or anything else, it will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them.” -Bruce Lee
+  </ul>
+  
+  <ul>
+    "Unless you try to do something beyond what you have already mastered, you will never grow". -Ralph Waldo Emerson
+  </ul>
+   
+  <ul>
+     "A mind needs books as a sword needs a whetstone.— Tyrion Lannister"
+  </ul>
+  
+  <ul>
+    "A ship is safe in harbor, but that's not what ships are for." -William Shedd
+  </ul>
+  
+  <ul>
+    “Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.” 
+― H. Jackson Brown Jr., P.S. I Love You
+  </ul>
+  
+  <ul>
+    “Fall in love with some activity, and do it! Nobody ever figures out what life is all about, and it doesn't matter. Explore the world. Nearly everything is really interesting if you go into it deeply enough. Work as hard and as much as you want to on the things you like to do the best. Don't think about what you want to be, but what you want to do. Keep up some kind of a minimum with other things so that society doesn't stop you from doing anything at all.” 
+― Richard Feynman
+  </ul>
+  
+  <ul>
+“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” 
+― Aaron Swartz
+  </ul>
+  
+  <ul>
+    “I wish it need not have happened in my time," said Frodo.
+"So do I," said Gandalf, "and so do all who live to see such times. But that is not for them to decide. All we have to decide is what to do with the time that is given us.” 
+― J.R.R. Tolkien, The Fellowship of the Ring
+  </ul>
+  
+  <ul>
+    “It is our choices, Harry, that show what we truly are, far more than our abilities.” 
+― J.K. Rowling, Harry Potter and the Chamber of Secrets
+  </ul>
+</p>
+
+
   
 </body>
 
