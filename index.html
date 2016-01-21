@@ -26,7 +26,7 @@
 }
 
 nav.navbar.shrink {
-  min-height: 200px;
+  min-height: 100px;
 }
 
 </style>
@@ -44,7 +44,7 @@ nav.navbar.shrink {
 <script>
 
 $(window).scroll(function() {
-  if ($(document).scrollTop() < 200) {
+  if ($(document).scrollTop() > 200) {
     $('nav').addClass('shrink');
   } else {
     $('nav').removeClass('shrink');
